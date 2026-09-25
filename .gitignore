@@ -1,0 +1,5 @@
+# Dev-only – never publish
+_screens/
+_dev/
+*.bak
+.DS_Store
