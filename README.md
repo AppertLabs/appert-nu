@@ -17,14 +17,15 @@ robots.txt, sitemap.xml, CNAME, .nojekyll
 
 Canonical, hreflang, og:url/og:image and sitemap.xml use absolute `https://appert.nu/...` URLs.
 
-## Open TODOs (search for `TODO` in the HTML)
+## Open work
 
-- **Store links**: every store button is a non-link "Binnenkort / Coming soon" label (`data-todo="app-store-link"` /
-  `"google-play-link"`). When an app is live, swap in a real link with the official App Store / Google Play badge
-  (hosted locally in `assets/`). Streamert: App Store (iPhone + Apple TV) and Google Play (Android).
-- **Contact email**: `data-todo="contact-email"` in the footers and on the privacy pages.
-- **Privacy text**: verify the app-data wording (Fietsert and Streamert) before relying on it.
-- **Screenshots**: only the Fietsert hero uses a real screenshot; other phone frames are honest "screenshot volgt" placeholders.
-- **App icons**: real iOS icons from the app repos (`assets/*-icon-*.png`, `*-favicon-64.png`, `/favicon.ico`).
+Open work lives in issues on the [AppertLabs board](https://github.com/orgs/AppertLabs/projects/1), not in this README:
+
+- [#1 Real App Store and Google Play links at launch](https://github.com/AppertLabs/appert-nu/issues/1) (`data-todo="app-store-link"` / `"google-play-link"`)
+- [#2 Contact email](https://github.com/AppertLabs/appert-nu/issues/2) (`data-todo="contact-email"`)
+- [#3 Verify the privacy text against the apps' data flows](https://github.com/AppertLabs/appert-nu/issues/3)
+- [#4 Real screenshots (incl. the Streamert player)](https://github.com/AppertLabs/appert-nu/issues/4)
+
+The `TODO` comments in the HTML mark the exact spots. App icons are the real iOS icons from the app repos (`assets/*-icon-*.png`, `*-favicon-64.png`, `/favicon.ico`).
 
 Dev helpers (screenshots, OG image sources) live outside this repo.
