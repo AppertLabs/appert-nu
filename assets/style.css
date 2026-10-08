@@ -187,7 +187,7 @@ h1 .accent { color: var(--green); }
   position: absolute; background: var(--card); border: 1px solid var(--line); border-radius: 16px;
   box-shadow: var(--shadow); padding: 12px 14px; font-size: 0.8rem; color: var(--ink); z-index: 4;
 }
-.float-live { left: 0; bottom: 64px; display: flex; gap: 10px; align-items: center; max-width: 220px; }
+.float-live { left: 0; top: calc(100% - 8px); display: flex; gap: 10px; align-items: center; max-width: 220px; }
 .float-live .live-num { width: 38px; height: 38px; font-size: 17px; color: #fff; }
 .float-live b { display: block; font-size: 0.85rem; }
 .float-live span { color: var(--muted); font-size: 0.75rem; }
@@ -224,11 +224,6 @@ section { scroll-margin-top: 16px; }
   content: ""; flex: none; width: 20px; height: 20px; margin-top: 2px; border-radius: 50%;
   background: var(--green-soft) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M5.5 10.5l3 3 6-7' fill='none' stroke='%231b4d3e' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center / 20px no-repeat;
 }
-.float-photo { right: 0; top: 40px; width: 170px; }
-.float-photo .leaflet { background: var(--gold-soft); border-radius: 10px; padding: 10px; font-weight: 800; color: var(--green-deep); font-size: 0.8rem; letter-spacing: 0.02em; line-height: 1.7; }
-.float-photo .caption { display: flex; align-items: center; gap: 6px; margin-top: 8px; color: var(--muted); font-size: 0.72rem; }
-.float-photo svg { width: 16px; height: 16px; flex: none; }
-@media (max-width: 1099px) { .float-photo { display: none; } }
 
 /* feature grid */
 .features { display: grid; gap: 14px; grid-template-columns: 1fr; }
@@ -306,10 +301,6 @@ section { scroll-margin-top: 16px; }
 @media (min-width: 900px) { .cta-section { padding: 80px 0; } }
 .site-footer { margin-top: 0; }
 @media (max-width: 599px) { .feature { padding: 16px; } }
-@media (min-width: 1100px) {
-  .pillar-visual.has-photo { justify-content: flex-start; padding-left: 24px; }
-  .float-photo { right: 0; top: 150px; width: 158px; }
-}
 .live { margin: auto 8px 18px; }
 .live-body { overflow: hidden; }
 .live-body b, .live-body span { text-overflow: ellipsis; overflow: hidden; }
@@ -383,8 +374,11 @@ img.lab-lockup { display: inline-block; height: 18px; width: auto; vertical-alig
 .also-card img.app-icon { border-radius: 22.37%; box-shadow: 0 6px 16px rgba(20,36,28,0.16); }
 
 /* ---------- Real screenshots in a phone frame / honest pending placeholders ---------- */
-.phone.shot { padding: 9px; }
-.phone.shot img { width: 100%; height: 100%; object-fit: cover; object-position: top; border-radius: 38px; display: block; background: var(--green-soft); }
+/* The frame follows the capture: no fixed aspect-ratio on the frame, the img keeps its
+   own intrinsic ratio (600x1304 Fietsert, 600x1299 Streamert) via height: auto, so no
+   pixel of a screenshot is cropped. The 38px radius only rounds the screen corners. */
+.phone.shot { padding: 9px; aspect-ratio: auto; height: auto; }
+.phone.shot img { width: 100%; height: auto; object-fit: contain; border-radius: 38px; display: block; background: var(--green-soft); }
 .phone.pending { background: #1a1d1b; }
 .pending-screen {
   height: 100%; border-radius: 37px; background: repeating-linear-gradient(135deg, var(--cream) 0 14px, var(--cream-2) 14px 28px);
@@ -395,7 +389,7 @@ img.lab-lockup { display: inline-block; height: 18px; width: auto; vertical-alig
 .pending-screen b { font-size: 0.95rem; line-height: 1.3; max-width: 16ch; }
 .pending-screen.dark { background: repeating-linear-gradient(135deg, #2b2938 0 14px, #26242f 14px 28px); color: #fff; }
 .also-card .store-soon { margin-top: 14px; }
-.float-live { max-width: 260px; }
+.float-live { max-width: 320px; }
 
 /* ---------- Apple Watch: the real screen capture, no drawn case ---------- */
 /* Series 10 (46 mm) display: 416x496 px with a corner radius of about 79 px
