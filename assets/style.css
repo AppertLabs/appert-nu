@@ -357,11 +357,18 @@ section { scroll-margin-top: 16px; }
 .also-card p { margin: 8px 0 0; color: var(--muted); max-width: 56ch; }
 .footer-apps a { color: var(--muted); }
 
-/* ---------- AppertLabs mark next to the brand name (icon is decorative, text stays) ---------- */
-.lab-icon { display: inline-block; vertical-align: middle; margin: -2px 7px 0 0; }
-.topbar-label { opacity: 1; color: rgba(207, 224, 214, 0.85); }
-.topbar .lab-icon { box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.14); }
-.also-card .eyebrow img.lab-icon { width: 16px; height: 16px; margin: -3px 6px 0 0; box-shadow: 0 1px 2px rgba(20, 36, 28, 0.16); }
+/* ---------- AppertLabs Spark lockup (icon + wordmark, outlined SVG; alt text carries the name) ----------
+   The wordmark baseline sits at 76.2% of the lockup height, so vertical-align: -23.8% of the height
+   puts it exactly on the text baseline of the surrounding words. */
+img.lab-lockup { display: inline-block; height: 18px; width: auto; vertical-align: -4.3px; border-radius: 0; box-shadow: none; background: none; }
+.topbar-label { opacity: 1; color: rgba(207, 224, 214, 0.85); flex: none; }
+.topbar-label img.lab-lockup { margin-left: 2px; max-width: none; }
+.also-card .eyebrow img.lab-lockup { width: auto; height: 17px; vertical-align: -4px; margin-left: 3px; border-radius: 0; box-shadow: none; }
+.footer-apps { display: inline-flex; flex-direction: column; align-items: flex-end; gap: 4px; }
+.footer-brand img.lab-lockup { margin-right: 1px; }
+.lab-slogan { font-size: 0.78rem; color: var(--muted); opacity: 0.8; letter-spacing: 0.01em; }
+@media (max-width: 799px) { .footer-apps { align-items: flex-start; } }
+@media (max-width: 359px) { .topbar-words { display: none; } }
 
 /* ---------- Streamert page ---------- */
 .st-float { right: 0; bottom: 70px; display: flex; gap: 10px; align-items: center; max-width: 230px; }
