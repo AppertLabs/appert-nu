@@ -450,3 +450,14 @@ img.lab-lockup { display: inline-block; height: 18px; width: auto; vertical-alig
 .faq-answer a { overflow-wrap: anywhere; }
 @media (max-width: 559px) { .faq summary { padding: 14px 16px; } .faq-answer { padding: 0 16px 14px; } }
 @media print { .faq .faq-answer { display: block; } }
+
+/* ---------- Official store badges: Apple "Download on the App Store" (unmodified SVG) and
+   Google "Get it on Google Play" (official PNG, transparent padding trimmed), shown at the same height.
+   Apple: min. 40 px high on screen, clear space = 1/4 of the badge height, black badge preferred. */
+.store-badge { display: inline-flex; line-height: 0; border-radius: 9px; padding: 12px; margin: -12px; }
+.store-badge img { height: 48px; width: auto; }
+.store-badge-sm { padding: 10px; margin: -10px; }
+.store-badge-sm img { height: 40px; }
+.store-row { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; }
+.store-row.header-store { display: none; }
+@media (min-width: 1180px) { .store-row.header-store { display: inline-flex; } }
