@@ -1,7 +1,7 @@
 # appert.nu
 
 Website for the apps by AppertLabs: **Fietsert** (cycle-junction app, the main page) and **Streamert** (internet radio for
-iPhone, Apple TV and Android). Fietsert is on the App Store (iPhone and Apple Watch) and Google Play (Android); Streamert isn't in the stores yet. Plain HTML + CSS: no build step, no JavaScript, no external fonts/CDNs, no analytics, no cookies.
+iPhone, Apple TV and Android). Neither app is in the stores yet. Plain HTML + CSS: no build step, no JavaScript, no external fonts/CDNs, no analytics, no cookies.
 
 Hosted on GitHub Pages from branch `main`, folder `/`, custom domain `appert.nu` (`CNAME`). `.nojekyll` turns off Jekyll
 processing.
@@ -22,7 +22,7 @@ Canonical, hreflang, og:url/og:image and sitemap.xml use absolute `https://apper
 
 Open work lives in issues on the [AppertLabs board](https://github.com/orgs/AppertLabs/projects/1), not in this README:
 
-- [#1 Real App Store and Google Play links at launch](https://github.com/AppertLabs/appert-nu/issues/1): Fietsert's App Store and Google Play badges are live (official Apple artwork in `assets/app-store-badge-{nl,en}.svg`, unmodified; official Google artwork in `assets/google-play-badge-{nl,en}.png`, only the transparent padding trimmed); still open: both Streamert stores (`data-todo="app-store-link"` / `"google-play-link"`)
+- [#1 Real App Store and Google Play links at launch](https://github.com/AppertLabs/appert-nu/issues/1) (`data-todo="app-store-link"` / `"google-play-link"`)
 - [#2 Contact email](https://github.com/AppertLabs/appert-nu/issues/2) (`data-todo="contact-email"`)
 - [#3 Verify the privacy text against the apps' data flows](https://github.com/AppertLabs/appert-nu/issues/3)
 - [#4 Real screenshots (incl. the Streamert player)](https://github.com/AppertLabs/appert-nu/issues/4)
