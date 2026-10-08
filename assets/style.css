@@ -406,3 +406,44 @@ section { scroll-margin-top: 16px; }
 .watch .placeholder-tag { bottom: -80px; }
 .watch { isolation: isolate; }
 .watch::before, .watch::after { height: 64px; }
+
+/* ---------- FAQ (native <details>, works without JavaScript) ---------- */
+.faq-page h1 { margin-bottom: 8px; }
+.faq-group { margin-top: 36px; }
+.faq-group h2 { margin: 0 0 12px; }
+.faq {
+  background: var(--card); border: 1px solid var(--line); border-radius: 16px;
+  margin: 0 0 10px; transition: box-shadow 0.2s ease;
+}
+.faq[open] { box-shadow: 0 8px 24px rgba(20, 36, 28, 0.07); }
+.faq summary {
+  list-style: none; cursor: pointer; display: flex; align-items: center; justify-content: space-between; gap: 16px;
+  padding: 16px 20px; border-radius: 16px; min-height: 44px;
+}
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::marker { content: ""; }
+.faq summary h3 { font-size: 1.05rem; font-weight: 650; line-height: 1.35; letter-spacing: -0.01em; }
+.faq summary::after {
+  content: ""; flex: none; width: 22px; height: 22px; border-radius: 50%; background: var(--green-soft)
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M6 8l4 4 4-4' fill='none' stroke='%231b4d3e' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center / 16px no-repeat;
+  transition: transform 0.2s ease;
+}
+.faq[open] summary::after { transform: rotate(180deg); }
+@media (prefers-reduced-motion: reduce) { .faq, .faq summary::after { transition: none; } }
+.faq summary:hover h3 { color: var(--green); }
+.faq-answer { padding: 0 20px 16px; }
+.faq-answer > :first-child { margin-top: 0; }
+.faq-answer > :last-child { margin-bottom: 0; }
+.faq-answer a { overflow-wrap: anywhere; }
+@media (max-width: 559px) { .faq summary { padding: 14px 16px; } .faq-answer { padding: 0 16px 14px; } }
+@media print { .faq .faq-answer { display: block; } }
+
+/* ---------- Official Apple "Download on the App Store" badge (unmodified artwork) ----------
+   Apple: min. 40 px high on screen, clear space = 1/4 of the badge height, black badge preferred. */
+.store-badge { display: inline-flex; line-height: 0; border-radius: 9px; padding: 12px; margin: -12px; }
+.store-badge img { height: 48px; width: auto; }
+.store-badge-sm { padding: 10px; margin: -10px; }
+.store-badge-sm img { height: 40px; }
+.store-row { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; }
+.store-row.header-store { display: none; }
+@media (min-width: 1180px) { .store-row.header-store { display: inline-flex; } }
