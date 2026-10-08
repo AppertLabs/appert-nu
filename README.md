@@ -9,6 +9,7 @@ processing.
 ```
 index.html, privacy.html          NL (default)
 en/index.html, en/privacy.html    EN
+faq.html, en/faq.html             FAQ NL / EN (also served at /faq and /en/faq)
 streamert/index.html              Streamert NL
 en/streamert/index.html           Streamert EN
 assets/                           CSS, icons, OG images
