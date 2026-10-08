@@ -371,7 +371,7 @@ img.lab-lockup { display: inline-block; height: 18px; width: auto; vertical-alig
 @media (max-width: 359px) { .topbar-words { display: none; } }
 
 /* ---------- Streamert page ---------- */
-.st-float { right: 0; bottom: 70px; display: flex; gap: 10px; align-items: center; max-width: 230px; }
+.st-float { right: 0; top: calc(100% - 20px); display: flex; gap: 10px; align-items: center; max-width: 250px; }
 .st-float .tv { width: 38px; height: 38px; border-radius: 10px; background: var(--green); color: #fff; display: grid; place-items: center; flex: none; }
 .st-float .tv svg { width: 20px; height: 20px; }
 .st-float b { display: block; font-size: 0.85rem; }
