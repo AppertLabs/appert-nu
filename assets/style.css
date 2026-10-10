@@ -444,3 +444,9 @@ img.lab-lockup { display: inline-block; height: 18px; width: auto; vertical-alig
   box-shadow: var(--shadow);
 }
 .team-photo figcaption { margin-top: 12px; color: var(--muted); font-size: 0.88rem; }
+
+/* ---------- Footer links: one line on desktop ----------
+   The link column sizes to its content (up to 60% of the row), so the five links
+   (incl. "Over ons" / "About us") fit on one line; each link wraps only as a whole. */
+@media (min-width: 800px) { .footer-grid { grid-template-columns: minmax(0, 1fr) fit-content(60%); gap: 24px 48px; } }
+.footer-links a { white-space: nowrap; }
