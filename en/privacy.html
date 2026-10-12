@@ -57,7 +57,7 @@
     <div class="summary">
       <strong>In short</strong>
       <ul>
-      <li>No ads, no tracking, no analytics and no account.</li>
+      <li>No ads, no tracking, no analytics for us (on Android, Google does get usage data from the photo route, see below) and no account.</li>
       <li>We have no server of our own: data from the apps does not reach us.</li>
       <li>To work, Fietsert sends your location or search text, plus your IP address, to map, search, routing and weather services run by others (see below).</li>
       <li>Your routes are stored on your device and, on iPhone if you choose, in your own iCloud.</li>
@@ -66,14 +66,14 @@
     </div>
     <h2>Who is responsible</h2>
     <p>Fietsert, Streamert and this website (appert.nu) are by Joost Wellen (AppertLabs), the controller under the GDPR. Contact: <a href="mailto:support@appert.nu">support@appert.nu</a>.</p>
-    <p>We show no ads, use no third-party analytics or tracking software, build no profile of you and don't sell or share data with advertisers. There is no automated decision-making or profiling.</p>
+    <p>We show no ads, use no analytics or tracking software, except Google ML Kit's built-in usage statistics on Android, build no profile of you and don't sell or share data with advertisers. There is no automated decision-making or profiling.</p>
     <h2 id="fietsert">Fietsert: what stays on your device</h2>
     <ul>
       <li><strong>Location</strong> – for the map, nearby junctions, guidance and break spots during a ride. Only with your permission; on iPhone in the background only while you navigate a route. Location is optional: without it you load a province yourself under Manage regions, and everything works except centring the map on your position, "Use my current location", guidance that follows your position and break spots.</li>
       <li><strong>Routes and settings</strong> – on your device. On iPhone and Apple Watch, if iCloud is on, also in your own iCloud with Apple; we have no access to it.</li>
       <li><strong>Apple Health (iPhone)</strong> – only if you choose to save after a ride are the workout, distance, energy burned and route you rode saved in Health. The app reads nothing from Health. To withdraw consent: choose "Don't save", or turn off Fietsert's access in the Health app or in Settings.</li>
       <li><strong>Apple Watch</strong> – uses your location for the map and navigation. The workout session while navigating keeps the app on screen and is not saved in Health.</li>
-      <li><strong>Photo route (iPhone)</strong> – junction numbers are read from the photo on your device; the photo is not sent anywhere.</li>
+      <li><strong>Photo route</strong> – junction numbers are read from the photo on your device (iPhone: Apple Vision; Android: Google ML Kit). The photo and the text go nowhere. On Android, ML Kit does send usage and performance data to Google (device model, Android and app version, an installation ID, speed and error codes, plus your IP address), not the photo or the text. <a href="https://developers.google.com/ml-kit/terms">ML Kit terms</a>.</li>
       <li><strong>Sharing a route</strong> and <strong>usage counters</strong> – you share through your phone's share menu yourself; the counters stay on your device.</li>
     </ul>
     <h2 id="services">Fietsert: services the app uses</h2>
@@ -101,6 +101,7 @@
       <li><strong>Workouts in Apple Health</strong> – health data, only with your explicit consent (Art. 6(1)(a) and Art. 9(2)(a)).</li>
       <li><strong>Sales reports</strong> (only with paid features) – legal tax obligation (Art. 6(1)(c)).</li>
       <li><strong>Streamert: searching, adding stations and loading websites/logos</strong> – needed for the feature you use (Art. 6(1)(b)) and our interest in a working app (Art. 6(1)(f)). ‘More for you’ – only with your consent (Art. 6(1)(a)); turn it off in Settings to withdraw it.</li>
+      <li><strong>Photo route on Android: ML Kit usage data to Google</strong> – our legitimate interest in offering on-device text recognition (Art. 6(1)(f)).</li>
       <li><strong>Support email and the website</strong> – our legitimate interest in answering your question and keeping the site secure and available (Art. 6(1)(f)).</li>
     </ul>
     <h2 id="retention">How long</h2>
@@ -109,7 +110,7 @@
     <ul>
       <li><strong>Inside the EEA:</strong> FOSSGIS (Germany), Deezer (France), TransIP (the Netherlands).</li>
       <li><strong>United Kingdom:</strong> OpenStreetMap Foundation, under an adequacy decision (valid until 27 December 2031). Map tiles may be served from outside the EEA.</li>
-      <li><strong>US:</strong> GitHub and Cloudflare (and Google LLC, for Google Play purchases) are certified under the EU–US Data Privacy Framework. Apple uses the European Commission's standard contractual clauses for transfers to Apple Inc. Support email via SpaceXAI (Grok Bot) is covered by the European Commission's standard contractual clauses. You can ask for a copy at <a href="mailto:support@appert.nu">support@appert.nu</a>.</li>
+      <li><strong>US:</strong> GitHub and Cloudflare (and Google LLC, for Google Play purchases and ML Kit on Android) are certified under the EU–US Data Privacy Framework. Apple uses the European Commission's standard contractual clauses for transfers to Apple Inc. Support email via SpaceXAI (Grok Bot) is covered by the European Commission's standard contractual clauses. You can ask for a copy at <a href="mailto:support@appert.nu">support@appert.nu</a>.</li>
       <li><strong>Streamert: music databases, station directory and radio stations:</strong> MusicBrainz and Cover Art Archive (United States), radio stations and their websites worldwide, and Radio Browser (location unknown) may be outside the EEA. No adequacy decision or other transfer safeguard applies to these connections.</li>
     </ul>
     <h2>Children</h2>
