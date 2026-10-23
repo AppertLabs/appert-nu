@@ -1,7 +1,7 @@
 # appert.nu
 
 Website for the apps by AppertLabs: **Fietsert** (cycle-junction app, the main page) and **Streamert** (internet radio for
-iPhone, Apple TV and Android). Neither app is in the stores yet. Plain HTML + CSS: no build step, no JavaScript, no external fonts/CDNs, no analytics, no cookies.
+iPhone, Apple TV and Android). Neither app is in the stores yet. Plain HTML + CSS: no build step, no external fonts/CDNs, no analytics, no cookies. The only JavaScript is `s/share.js` (the shared-station page, see below): it reads the station name from the URL fragment in the browser, makes no requests and stores nothing.
 
 Hosted on GitHub Pages from branch `main`, folder `/`, custom domain `appert.nu` (`CNAME`). `.nojekyll` turns off Jekyll
 processing.
@@ -12,11 +12,23 @@ en/index.html, en/privacy.html    EN
 faq.html, en/faq.html             FAQ NL / EN (also served at /faq and /en/faq)
 streamert/index.html              Streamert NL
 en/streamert/index.html           Streamert EN
+s/index.html, s/share.js          Shared Streamert station landing page (NL+EN in one page; noindex)
+.well-known/                      apple-app-site-association (iOS Universal Links), assetlinks.json (Android App Links)
 assets/                           CSS, icons, OG images
 robots.txt, sitemap.xml, CNAME, .nojekyll
 ```
 
 Canonical, hreflang, og:url/og:image and sitemap.xml use absolute `https://appert.nu/...` URLs.
+
+## Shared stations (Streamert #185)
+
+`https://appert.nu/s/#<base64url JSON>` carries one station in the URL **fragment**, which browsers never send to a server, so
+nothing about the station reaches GitHub Pages or us. With the app installed, iOS (Universal Link) and Android (App Link) open
+Streamert instead of this page. `.well-known/apple-app-site-association` (Team ID `44267NHU7P`, `nu.appert.streamert`, paths
+`/s` and `/s/*`) and `.well-known/assetlinks.json` make that work. GitHub Pages serves the extensionless AASA file as
+`application/octet-stream`, which iOS accepts. `assetlinks.json` needs the **Play app-signing** SHA-256 certificate fingerprint
+(Play Console > Setup > App integrity > App signing); replace the placeholder before merging. Keep the `/s/` page out of
+`sitemap.xml`.
 
 ## Open work
 
