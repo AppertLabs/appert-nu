@@ -1,0 +1,13 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": ["44267NHU7P.nu.appert.streamert"],
+        "components": [
+          { "/": "/s", "comment": "Shared Streamert station (no trailing slash)" },
+          { "/": "/s/*", "comment": "Shared Streamert station: https://appert.nu/s/#<data>" }
+        ]
+      }
+    ]
+  }
+}

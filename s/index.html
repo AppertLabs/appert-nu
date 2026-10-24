@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Streamert – zender gedeeld / station shared</title>
+<meta name="description" content="Iemand heeft een radiozender met je gedeeld via Streamert. / Someone shared a radio station with you in Streamert.">
+<meta name="robots" content="noindex">
+<meta name="referrer" content="no-referrer">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self'; base-uri 'none'; form-action 'none'">
+<meta name="theme-color" content="#1b4d3e">
+<link rel="canonical" href="https://appert.nu/s/">
+<link rel="icon" href="../assets/streamert-favicon-64.png" type="image/png" sizes="64x64">
+<link rel="apple-touch-icon" href="../assets/streamert-icon-180.png">
+<link rel="stylesheet" href="../assets/style.css">
+<script src="share.js" defer></script>
+</head>
+<body class="share-page">
+<a class="skip" href="#main"><span data-lang="nl" lang="nl">Naar de inhoud</span><span data-lang="en" lang="en">Skip to content</span></a>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../streamert/index.html" aria-label="Streamert">
+      <img class="app-icon" src="../assets/streamert-icon-180.png" alt="" width="34" height="34">
+      <span class="brand-name">Streamert</span>
+      <span class="brand-by"><span data-lang="nl" lang="nl">door AppertLabs</span><span data-lang="en" lang="en">by AppertLabs</span></span>
+    </a>
+    <div class="header-actions">
+      <div class="lang" aria-label="Taal / Language">
+        <button type="button" class="lang-btn" data-set-lang="nl" lang="nl">NL</button>
+        <button type="button" class="lang-btn" data-set-lang="en" lang="en">EN</button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+  <section class="share-card-wrap">
+    <div class="wrap">
+      <div class="share-card">
+        <img class="share-icon" src="../assets/streamert-icon-180.png" alt="" width="88" height="88">
+        <p class="eyebrow"><span data-lang="nl" lang="nl">Zender gedeeld</span><span data-lang="en" lang="en">Station shared</span></p>
+
+        <div data-lang="nl" lang="nl">
+          <h1 class="share-title"><span id="share-name-nl" data-share-name>Een zender</span></h1>
+          <p class="lede share-lede" id="share-lede-nl">Iemand heeft een radiozender met je gedeeld in Streamert. Open de link op je telefoon om hem toe te voegen.</p>
+        </div>
+        <div data-lang="en" lang="en">
+          <h1 class="share-title"><span id="share-name-en" data-share-name>A station</span></h1>
+          <p class="lede share-lede" id="share-lede-en">Someone shared a radio station with you in Streamert. Open this link on your phone to add it.</p>
+        </div>
+
+        <ol class="share-steps">
+          <li><span data-lang="nl" lang="nl">Haal Streamert in de App Store of op Google Play.</span><span data-lang="en" lang="en">Get Streamert from the App Store or Google Play.</span></li>
+          <li><span data-lang="nl" lang="nl">Open deze link daarna opnieuw, of scan de QR-code nog eens met de camera. Streamert vraagt dan of je de zender wilt toevoegen.</span><span data-lang="en" lang="en">Then open this link again, or scan the QR code again with the camera. Streamert will ask if you want to add the station.</span></li>
+        </ol>
+
+        <div class="store-soon" role="group" aria-label="Streamert">
+          <!-- TODO (appert-nu #1): not live yet. Replace these "coming soon" labels with the real App Store / Google Play links (Google Play package: nu.appert.streamert) when the apps are published; same as streamert/index.html. -->
+          <span class="btn btn-soon" data-todo="app-store-link"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 7.5V12l3 2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="store-text"><small><span data-lang="nl" lang="nl">Binnenkort in de</span><span data-lang="en" lang="en">Coming soon to the</span></small>App Store</span></span>
+          <span class="btn btn-soon" data-todo="google-play-link"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 7.5V12l3 2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="store-text"><small><span data-lang="nl" lang="nl">Binnenkort op</span><span data-lang="en" lang="en">Coming soon to</span></small>Google Play</span></span>
+        </div>
+
+        <div class="share-copy" hidden>
+          <button type="button" class="btn btn-ghost" id="share-copy"><span data-lang="nl" lang="nl">Kopieer link</span><span data-lang="en" lang="en">Copy link</span></button>
+          <span class="share-copied" id="share-copied" role="status" aria-live="polite"></span>
+        </div>
+
+        <noscript><p class="share-note"><span data-lang="nl" lang="nl">Zonder JavaScript kan deze pagina de zendernaam niet tonen. De link werkt gewoon in Streamert.</span><span data-lang="en" lang="en">Without JavaScript this page can't show the station name. The link still works in Streamert.</span></p></noscript>
+
+        <p class="share-note"><span data-lang="nl" lang="nl">De zender zit alleen in deze link. appert.nu ontvangt of bewaart er niets van.</span><span data-lang="en" lang="en">The station is only in this link. appert.nu doesn't receive or store any of it.</span></p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-bottom">
+      <span>© 2026 Joost Wellen (AppertLabs)</span>
+      <span class="footer-apps"><a href="../privacy.html#streamert" data-lang="nl" lang="nl">Privacy</a><a href="../en/privacy.html#streamert" data-lang="en" lang="en">Privacy</a> · <a href="../faq.html#streamert">FAQ</a> · <a href="mailto:support@appert.nu">support@appert.nu</a></span>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

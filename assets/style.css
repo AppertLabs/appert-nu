@@ -450,3 +450,32 @@ img.lab-lockup { display: inline-block; height: 18px; width: auto; vertical-alig
    (incl. "Over ons" / "About us") fit on one line; each link wraps only as a whole. */
 @media (min-width: 800px) { .footer-grid { grid-template-columns: minmax(0, 1fr) fit-content(60%); gap: 24px 48px; } }
 .footer-links a { white-space: nowrap; }
+
+/* ---------- Shared station landing page (/s/) ----------
+   Both languages are in the HTML. Without JavaScript both show (NL, then EN);
+   with it, only the visitor's language does (share.js sets html[data-ui]). */
+.share-page .lang { display: flex; gap: 4px; }
+.lang-btn {
+  font: inherit; font-weight: 700; font-size: 0.85rem; color: var(--green); background: transparent;
+  border: 0; border-radius: 999px; padding: 6px 12px; min-height: 36px; cursor: pointer;
+}
+.lang-btn:hover { background: var(--green-soft); color: var(--green-deep); }
+.lang-btn[aria-current="true"] { background: var(--green-soft); color: var(--green-deep); cursor: default; }
+.js[data-ui="nl"] [data-lang="en"], .js[data-ui="en"] [data-lang="nl"] { display: none; }
+.share-card-wrap { padding: 32px 0 72px; }
+.share-card {
+  max-width: 560px; margin: 0 auto; background: var(--card); border: 1px solid var(--line);
+  border-radius: 28px; box-shadow: var(--shadow); padding: 36px 28px; text-align: center;
+}
+.share-icon { margin: 0 auto 16px; border-radius: 22px; }
+.share-title { font-size: clamp(1.8rem, 6vw, 2.6rem); overflow-wrap: anywhere; }
+.share-lede { margin: 14px auto 22px; }
+.share-steps { text-align: left; margin: 0 auto 24px; padding-left: 1.3em; color: var(--muted); max-width: 44ch; }
+.share-steps li { margin: 0 0 8px; }
+.share-card .store-soon { justify-content: center; }
+.share-copy { margin-top: 22px; display: flex; gap: 12px; align-items: center; justify-content: center; flex-wrap: wrap; }
+.share-copy[hidden] { display: none; }
+.share-copied { color: var(--green); font-weight: 650; min-height: 1.5em; }
+.share-note { margin: 22px 0 0; font-size: 0.88rem; color: var(--muted); }
+@media (max-width: 599px) { .share-card { padding: 28px 18px; border-radius: 22px; } }
+html:not(.js) .share-page .lang { display: none; }
