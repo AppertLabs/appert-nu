@@ -12,6 +12,8 @@ en/index.html, en/privacy.html    EN
 faq.html, en/faq.html             FAQ NL / EN (also served at /faq and /en/faq)
 streamert/index.html              Streamert NL
 en/streamert/index.html           Streamert EN
+streamert/terms.html              Streamert Terms of Use NL
+en/streamert/terms.html           Streamert Terms of Use EN
 s/index.html, s/share.js          Shared Streamert station landing page (NL+EN in one page; noindex)
 .well-known/                      apple-app-site-association (iOS Universal Links), assetlinks.json (Android App Links)
 assets/                           CSS, icons, OG images
